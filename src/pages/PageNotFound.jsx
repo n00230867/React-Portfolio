@@ -1,16 +1,13 @@
-import { useLocation } from "react-router-dom";
+import { useLocation } from 'react-router';
 
-const PageNotFound = () => {
-    const location = useLocation();
+export default function PageNotFound() {
+    let location = useLocation();
 
-    //console.log(location);
+    console.log(location);
 
     return (
         <div>
-            <h1>404 - Page Not Found</h1>
-            <p>The page at '{location.pathname}' does not exist.</p>
+            <h2>Sorry, 404 the page { location.pathname } was not found</h2>
         </div>
     );
-};
-
-export default PageNotFound;
+}
