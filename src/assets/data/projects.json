@@ -5,7 +5,7 @@
         "description": "A simple todo application to manage daily tasks.",
         "screenshots": [
             {
-                "url": "https://picsum.photos/seed/todoapp/600/400",
+                "url": "/images/example.png",
                 "caption": "Screenshot of Todo App"
             },
             {
