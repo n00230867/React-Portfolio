@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route  } from 'react-router'
 import { useEffect, useState } from 'react';
-import Navbar from './components/Navbar';
+import Navbar from './components/NavBar';
 import Intro from './components/Intro';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
@@ -53,9 +53,15 @@ export default function App() {
   const toggleTheme = () => setIsDark(currentMode => !currentMode);
 
   return (
-    <div className="min-h-screen bg-background text-foreground relative">
+    <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute -left-32 top-10 h-72 w-72 rounded-full bg-primary/5 blur-3xl" />
+        <div className="absolute right-[-18rem] top-24 h-96 w-96 rounded-full bg-secondary/20 blur-3xl" />
+        <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-primary/5 via-background to-transparent" />
+      </div>
+
       <Navbar activeSection={activeSection} />
-      <main className='max-w-4xl mx-auto px-6 sm:px-8 lg:px-16'>
+      <main className='relative z-10 max-w-5xl mx-auto px-6 sm:px-8 lg:px-16 pb-20'>
         <Intro />
         <Projects />
         <Contact />
