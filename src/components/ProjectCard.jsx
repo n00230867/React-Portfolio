@@ -39,21 +39,23 @@ export function ProjectCard({ project }) {
   const screenshot = screenshots[0];
 
   return (
-    <Card className="flex flex-col h-full overflow-hidden">
+    <Card className="flex flex-col h-full overflow-hidden border-border/70 shadow-sm hover:shadow-xl transition duration-300 bg-card/80 backdrop-blur">
       {screenshot?.url && (
         <div className="aspect-video w-full overflow-hidden">
           <img
             src={screenshot.url}
             alt={screenshot.caption || `${title} screenshot`}
             loading="lazy"
-            className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+            className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
           />
         </div>
       )}
-      <CardHeader className="pb-2">
-        <CardTitle>{title}</CardTitle>
-        <CardDescription>
-          {date && <span className="font-medium mr-2">{date}</span>}
+      <CardHeader className="pb-2 space-y-2">
+        <div className="flex items-start justify-between gap-3">
+          <CardTitle className="text-xl font-semibold">{title}</CardTitle>
+          {date && <span className="rounded-full bg-secondary/60 text-secondary-foreground text-xs px-3 py-1">{date}</span>}
+        </div>
+        <CardDescription className="leading-relaxed text-muted-foreground">
           {description}
         </CardDescription>
       </CardHeader>
@@ -61,20 +63,20 @@ export function ProjectCard({ project }) {
         {tags?.length > 0 && (
           <div className="flex flex-wrap gap-2">
             {tags.map((tag) => (
-              <Badge key={tag} variant="secondary" className="uppercase tracking-wide">
+              <Badge key={tag} variant="secondary" className="uppercase tracking-wide bg-secondary/60 text-secondary-foreground border-border/60">
                 {tag}
               </Badge>
             ))}
           </div>
         )}
       </CardContent>
-      <CardFooter className="mt-auto flex gap-3">
+      <CardFooter className="mt-auto flex gap-3 items-center">
         {url && (
           <a
             href={url}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-medium underline underline-offset-4 hover:text-primary"
+            className="text-sm font-semibold underline underline-offset-4 hover:text-primary"
           >
             Live Site
           </a>
@@ -84,7 +86,7 @@ export function ProjectCard({ project }) {
             href={github}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-medium underline underline-offset-4 hover:text-primary"
+            className="text-sm font-semibold underline underline-offset-4 hover:text-primary"
           >
             GitHub
           </a>
@@ -92,7 +94,7 @@ export function ProjectCard({ project }) {
 
         <Dialog>
           <DialogTrigger asChild>
-            <Button size="sm" variant="outline" className="cursor-pointer ml-auto">
+            <Button size="sm" variant="outline" className="cursor-pointer ml-auto rounded-full">
               View More
             </Button>
           </DialogTrigger>
