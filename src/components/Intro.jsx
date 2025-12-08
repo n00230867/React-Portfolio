@@ -1,77 +1,103 @@
-import TextType from "@/components/animations/TextType";
+import TextType from "./animations/TextType";
+
+import { Github, Linkedin, Mail, ArrowDownRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function Intro() {
   return (
-    <header id="intro" className="min-h-screen flex items-center">
-      <div className="grid lg:grid-cols-5 gap-12 sm:gap-16 w-full">
-        <div className="lg:col-span-3 space-y-6 sm:space-y-8">
-          <div className="space-y-3 sm:space-y-2">
-            <div className="text-sm text-muted-foreground tracking-wider">
-              PORTFOLIO / 2025
-            </div>
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light tracking-tight">
-              <TextType
-                text={[
-                  "Eduards Oss"
-                ]}
-                typingSpeed={75}
-                pauseDuration={1500}
-                showCursor={true}
-                loop={false}
-                cursorCharacter="|"
-              />
-              
-              {/* <span className="text-muted-foreground">Che</span> */}
-            </h1>
-          </div>
+    <header
+      id="intro"
+      className="relative min-h-screen flex items-center justify-center px-6"
+    >
+      {/* Soft background glow */}
+      <div className="absolute inset-0 -z-10 flex items-center justify-center">
+        <div className="h-[500px] w-[500px] rounded-full bg-emerald-500/10 blur-[160px]" />
+      </div>
 
-          <div className="space-y-6 max-w-md">
-            <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
-              Frontend Developer crafting digital experiences at the
-              intersection of
-              <span className="text-foreground"> design</span>,
-              <span className="text-foreground"> technology</span>, and
-              <span className="text-foreground"> user experience</span>.
-            </p>
-
-            <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 text-sm text-muted-foreground">
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                Available for work
-              </div>
-              <div>Ireland</div>
-            </div>
-          </div>
+      <div className="w-full max-w-5xl mx-auto grid gap-16 text-center">
+        {/* Top micro row */}
+        <div className="flex justify-between text-xs tracking-widest text-muted-foreground">
+          <span>PORTFOLIO 2025</span>
+          <span>IRELAND</span>
         </div>
 
-        <div className="lg:col-span-2 flex flex-col justify-end space-y-6 sm:space-y-8 mt-8 lg:mt-0">
-          <div className="space-y-4">
-            <div className="text-sm text-muted-foreground font-mono">
-              CURRENTLY
-            </div>
-            <div className="space-y-2">
-              <div className="text-foreground">Student</div>
-              <div className="text-muted-foreground">@ IADT</div>
-              <div className="text-xs text-muted-foreground">
-                2023 — Present
-              </div>
-            </div>
+        {/* Main content */}
+        <div className="space-y-10">
+          <div className="space-y-6">
+            <h1 className="text-[clamp(3.5rem,8vw,6.5rem)] font-extralight leading-[0.9] tracking-tight">
+              Eduards Oss
+            </h1>
+
+            <p className="uppercase text-xs tracking-[0.3em] text-emerald-600">
+              Frontend Developer
+            </p>
           </div>
 
-          <div className="space-y-4">
-            <div className="text-sm text-muted-foreground font-mono">FOCUS</div>
-            <div className="flex flex-wrap gap-2">
-              {["HTML", "CSS", "JavaScript", "React", "Tailwind CSS"].map(
-                (skill) => (
-                  <span
-                    key={skill}
-                    className="px-3 py-1 text-xs border border-border rounded-full hover:border-muted-foreground/50 transition-colors duration-300"
-                  >
-                    {skill}
-                  </span>
-                )
-              )}
-            </div>
+          <p className="mx-auto max-w-2xl text-lg text-muted-foreground leading-relaxed">
+            I build clean, high-performance interfaces with a focus on usability,
+            motion, and visual precision. My goal is simple: make the web feel
+            better to use.
+          </p>
+
+          {/* Status row */}
+          <div className="flex flex-wrap items-center justify-center gap-8 text-sm text-muted-foreground">
+            <span className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-emerald-500" />
+              Available for work
+            </span>
+            <span>Remote / On-site</span>
+            <span className="text-emerald-600">Student @ IADT</span>
+          </div>
+
+          {/* CTA buttons */}
+          <div className="flex flex-wrap items-center justify-center gap-6">
+            <Button
+              asChild
+              className="rounded-full px-6 bg-emerald-600 hover:bg-emerald-700"
+            >
+              <a href="#projects">
+                View Projects <ArrowDownRight className="ml-2 w-4 h-4" />
+              </a>
+            </Button>
+
+            <Button asChild variant="outline" className="rounded-full px-6">
+              <a href="#contact">Contact Me</a>
+            </Button>
+          </div>
+
+          {/* Tech stack */}
+          <div className="flex flex-wrap justify-center gap-3 pt-6">
+            {[
+              "HTML",
+              "CSS",
+              "JavaScript",
+              "React",
+              "Tailwind",
+              "Shadcn",
+              "PHP",
+              "Laravel",
+            ].map((tech) => (
+              <span
+                key={tech}
+                className="px-3 py-1 text-xs rounded-full border border-emerald-200/60 bg-background"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+
+
+          {/* Socials */}
+          <div className="flex justify-center items-center gap-8 pt-6 text-muted-foreground">
+            {[Github, Linkedin, Mail].map((Icon, i) => (
+              <a
+                key={i}
+                href="#"
+                className="hover:text-emerald-600 transition"
+              >
+                <Icon className="w-5 h-5" />
+              </a>
+            ))}
           </div>
         </div>
       </div>

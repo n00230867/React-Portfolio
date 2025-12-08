@@ -1,18 +1,41 @@
+export default function Navbar({ activeSection }) {
+  return (
+    <nav className="fixed left-8 top-1/2 -translate-y-1/2 z-20 hidden lg:block">
+      <div className="flex flex-col gap-6">
+        {["intro", "projects", "contact"].map((section) => (
+          <button
+            key={section}
+            onClick={() =>
+              document
+                .getElementById(section)
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
+            className="group flex items-center gap-4"
+          >
+            {/* Active indicator — smoother + more elegant */}
+            <span
+              className={`w-[3px] h-6 rounded-full transition-all duration-300
+                ${
+                  activeSection === section
+                    ? "bg-emerald-500 scale-y-110"
+                    : "bg-emerald-200 group-hover:bg-emerald-400"
+                }`}
+            />
 
-
-export default function Navbar({ activeSection }){
-    return (
-        <nav className="fixed left-8 top-1/2 -translate-y-1/2 z-10 hidden lg:block">
-          <div className="flex flex-col gap-4">
-            {['intro', 'projects', 'contact'].map(section => (
-                <button
-                    key={section}
-                    onClick={() => document.getElementById(section).scrollIntoView({ behavior: 'smooth' })}
-                    className={`w-2 h-8 rounded-full cursor-pointer
-                      ${activeSection === section ? 'bg-foreground' : 'bg-muted-foreground/30 hover:bg-muted-foreground/60'} `}
-                ><span className="text-sm ml-4" >{section}</span></button>
-            ))}
-          </div>
-        </nav>
-    );
+            {/* Label — cleaner + calmer */}
+            <span
+              className={`text-sm capitalize tracking-wide transition-colors duration-300
+                ${
+                  activeSection === section
+                    ? "text-emerald-600 font-medium"
+                    : "text-muted-foreground group-hover:text-emerald-600"
+                }`}
+            >
+              {section}
+            </span>
+          </button>
+        ))}
+      </div>
+    </nav>
+  );
 }
