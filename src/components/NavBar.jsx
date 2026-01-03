@@ -1,7 +1,7 @@
 export default function Navbar({ activeSection }) {
   return (
     <nav className="fixed left-8 top-1/2 -translate-y-1/2 z-20 hidden lg:block">
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-8">
         {["intro", "projects", "contact"].map((section) => (
           <button
             key={section}
@@ -12,23 +12,23 @@ export default function Navbar({ activeSection }) {
             }
             className="group flex items-center gap-4"
           >
-            {/* Active indicator — smoother + more elegant */}
+            {/* Minimal line indicator */}
             <span
-              className={`w-[3px] h-6 rounded-full transition-all duration-300
+              className={`h-px rounded-full transition-all duration-500
                 ${
                   activeSection === section
-                    ? "bg-emerald-500 scale-y-110"
-                    : "bg-border dark:bg-emerald-900 group-hover:bg-emerald-400"
+                    ? "w-12 bg-emerald-600 dark:bg-emerald-400"
+                    : "w-8 bg-border group-hover:w-10 group-hover:bg-emerald-600/50"
                 }`}
             />
 
-            {/* Label — cleaner + calmer */}
+            {/* Clean uppercase label */}
             <span
-              className={`text-sm capitalize tracking-wide transition-colors duration-300
+              className={`text-[10px] uppercase tracking-[0.2em] font-light transition-all duration-300
                 ${
                   activeSection === section
-                    ? "text-emerald-600 font-medium"
-                    : "text-muted-foreground group-hover:text-emerald-600"
+                    ? "text-emerald-600 dark:text-emerald-400 opacity-100"
+                    : "text-muted-foreground opacity-0 group-hover:opacity-100 group-hover:text-foreground"
                 }`}
             >
               {section}
