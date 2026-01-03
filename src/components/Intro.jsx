@@ -9,9 +9,9 @@ export default function Intro() {
       id="intro"
       className="relative min-h-screen flex items-center justify-center px-6"
     >
-      {/* Soft background glow */}
+      {/* Soft background glow - adapts to theme */}
       <div className="absolute inset-0 -z-10 flex items-center justify-center">
-        <div className="h-[500px] w-[500px] rounded-full bg-emerald-500/10 blur-[160px]" />
+        <div className="h-[500px] w-[500px] rounded-full bg-emerald-500/10 dark:bg-emerald-400/5 blur-[160px]" />
       </div>
 
       <div className="w-full max-w-5xl mx-auto grid gap-16 text-center">
@@ -28,7 +28,7 @@ export default function Intro() {
               Eduards Oss
             </h1>
 
-            <p className="uppercase text-xs tracking-[0.3em] text-emerald-600">
+            <p className="uppercase text-xs tracking-[0.3em] text-emerald-600 dark:text-emerald-400">
               Frontend Developer
             </p>
           </div>
@@ -46,7 +46,7 @@ export default function Intro() {
               Available for work
             </span>
             <span>Remote / On-site</span>
-            <span className="text-emerald-600">Student @ IADT</span>
+            <span className="text-emerald-600 dark:text-emerald-400">Student @ IADT</span>
           </div>
 
           {/* CTA buttons */}

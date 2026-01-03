@@ -18,7 +18,7 @@ export default function Navbar({ activeSection }) {
                 ${
                   activeSection === section
                     ? "bg-emerald-500 scale-y-110"
-                    : "bg-emerald-200 group-hover:bg-emerald-400"
+                    : "bg-border dark:bg-emerald-900 group-hover:bg-emerald-400"
                 }`}
             />
 

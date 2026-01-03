@@ -5,6 +5,7 @@ import Intro from './components/Intro';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import ThemeToggle from './components/ThemeToggle';
 
 // pages
 // import Home from './pages/Home';
@@ -54,6 +55,11 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-background text-foreground relative">
+      {/* Theme toggle - fixed top right */}
+      <div className="fixed top-6 right-6 z-50">
+        <ThemeToggle isDark={isDark} toggleTheme={toggleTheme} />
+      </div>
+      
       <Navbar activeSection={activeSection} />
       <main className='max-w-4xl mx-auto px-6 sm:px-8 lg:px-16'>
         <Intro />

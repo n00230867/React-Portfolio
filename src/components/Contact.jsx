@@ -22,7 +22,7 @@ export default function Contact() {
           <div className="space-y-8">
             <div className="flex items-center gap-6">
               <span className="h-[1px] w-12 bg-emerald-500/60" />
-              <span className="text-xs uppercase tracking-[0.3em] text-emerald-600">
+              <span className="text-xs uppercase tracking-[0.3em] text-emerald-600 dark:text-emerald-400">
                 Contact
               </span>
             </div>
