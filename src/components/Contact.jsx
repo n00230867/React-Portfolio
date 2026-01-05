@@ -33,9 +33,9 @@ export default function Contact() {
           </div>
 
           <p className="text-lg text-muted-foreground leading-relaxed">
-            If you’re looking for a frontend developer who cares about clarity,
-            performance, and real user experience, I’d love to hear about your
-            project or idea.
+            If you're looking for a full-stack developer who cares about clarity,
+            performance, and real user experience across both frontend and backend,
+            I'd love to hear about your project or idea.
           </p>
 
           {/* Primary CTA */}
@@ -45,8 +45,8 @@ export default function Contact() {
               variant="outline"
               className="rounded-full px-8 py-6"
             >
-              <a href="mailto:test@example.com">
-                test@example.com <ArrowUpRight className="ml-2 w-4 h-4" />
+              <a href="mailto:N00230867@iadt.ie">
+                N00230867@iadt.ie <ArrowUpRight className="ml-2 w-4 h-4" />
               </a>
             </Button>
 
@@ -65,7 +65,9 @@ export default function Contact() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <a
-              href="#"
+              href="https://github.com/n00230867"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group flex items-center gap-3 text-muted-foreground hover:text-emerald-600 transition"
             >
               <Github className="w-5 h-5" />
@@ -73,7 +75,9 @@ export default function Contact() {
             </a>
 
             <a
-              href="#"
+              href="https://www.linkedin.com/in/eduards-oss-4b38653a2/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group flex items-center gap-3 text-muted-foreground hover:text-emerald-600 transition"
             >
               <Linkedin className="w-5 h-5" />
@@ -81,7 +85,7 @@ export default function Contact() {
             </a>
 
             <a
-              href="mailto:test@example.com"
+              href="mailto:N00230867@iadt.ie"
               className="group flex items-center gap-3 text-muted-foreground hover:text-emerald-600 transition"
             >
               <Mail className="w-5 h-5" />

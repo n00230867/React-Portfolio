@@ -29,14 +29,15 @@ export default function Intro() {
             </h1>
 
             <p className="uppercase text-xs tracking-[0.3em] text-emerald-600 dark:text-emerald-400">
-              Frontend Developer
+              Full-Stack Developer
             </p>
           </div>
 
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground leading-relaxed">
             I build clean, high-performance interfaces with a focus on usability,
-            motion, and visual precision. My goal is simple: make the web feel
-            better to use.
+            motion, and visual precision. As a full-stack developer, I work across
+            both frontend and backend to create seamless experiences. My goal is simple:
+            make the web feel better to use.
           </p>
 
           {/* Status row */}
@@ -89,15 +90,28 @@ export default function Intro() {
 
           {/* Socials */}
           <div className="flex justify-center items-center gap-8 pt-6 text-muted-foreground">
-            {[Github, Linkedin, Mail].map((Icon, i) => (
-              <a
-                key={i}
-                href="#"
-                className="hover:text-emerald-600 transition"
-              >
-                <Icon className="w-5 h-5" />
-              </a>
-            ))}
+            <a
+              href="https://github.com/n00230867"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-emerald-600 transition"
+            >
+              <Github className="w-5 h-5" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/eduards-oss-4b38653a2/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-emerald-600 transition"
+            >
+              <Linkedin className="w-5 h-5" />
+            </a>
+            <a
+              href="mailto:N00230867@iadt.ie"
+              className="hover:text-emerald-600 transition"
+            >
+              <Mail className="w-5 h-5" />
+            </a>
           </div>
         </div>
       </div>

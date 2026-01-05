@@ -1,85 +1,113 @@
 [
     {
-        "slug": "todo-app",
-        "title": "Todo App",
-        "description": "A simple todo application to manage daily tasks.",
+        "slug": "reservenow-booking-system",
+        "title": "ReserveNow - Online Booking & Reservation System",
+        "description": "A Laravel-based booking and reservation system with Docker containerization, featuring MySQL and MongoDB databases, event-driven notifications, and queue-based background processing. Includes role-based access control, payment processing integration, and API authentication with Laravel Sanctum.",
         "screenshots": [
             {
-                "url": "/images/example.png",
-                "caption": "Screenshot of Todo App"
+                "url": "https://picsum.photos/seed/reservenow/600/400",
+                "caption": "Booking Management Dashboard"
             },
             {
-                "url": "https://picsum.photos/seed/todoapp/600/400",
-                "caption": "Screenshot of Todo App"
+                "url": "https://picsum.photos/seed/reservenow2/600/400",
+                "caption": "Resource Booking Interface"
             },
             {
-                "url": "https://picsum.photos/seed/todoapp/600/400",
-                "caption": "Screenshot of Todo App"
+                "url": "https://picsum.photos/seed/reservenow3/600/400",
+                "caption": "Payment Processing"
             }
         ],
-        "url": "https://example.com/todo-app",
-        "github": "",
+        "url": "",
+        "github": "https://github.com/IADT-CC-Y3-BED/reservenow-an-online-booking-and-reservation-system-n00230867.git",
         "date": "2025",
-        "tags": ["React", "JavaScript", "CSS", "HTML"]
+        "tags": ["Laravel", "Docker", "MySQL", "MongoDB", "Queue", "API", "Event-Driven", "Sanctum"]
     },
     {
-        "slug": "gif-app",
-        "title": "Gif App",
-        "description": "A simple Tenor Gif application that demonstrates API integration and dynamic content rendering.",
+        "slug": "donateca-charity-platform",
+        "title": "DonateCA - Charity Donation Platform",
+        "description": "A comprehensive full-stack web platform built with Laravel that connects donors with charities, enabling transparent donation management and facilitating charitable giving. Features role-based access control, image uploads, donation tracking, and offer management.",
         "screenshots": [
             {
-                "url": "https://picsum.photos/seed/gifapp/600/400",
-                "caption": "Screenshot of Gif App"
+                "url": "/screenshots/donation/donation-1.png",
+                "caption": "Charity Browse Page"
+            },
+            {
+                "url": "/screenshots/donation/donation-2.png",
+                "caption": "Donation Management"
+            },
+            {
+                "url": "/screenshots/donation/donation-3.png",
+                "caption": "Admin Dashboard"
             }
         ],
-        "url": "https://example.com/gif-app",
-        "github": "",
+        "url": "",
+        "github": "https://github.com/n00230867/donateCA.git",
         "date": "2025",
-        "tags": ["React", "JavaScript", "CSS", "HTML", "APIs"]
+        "tags": ["Laravel", "PHP", "MySQL", "Blade", "Bootstrap", "Full-Stack", "Authentication"]
     },
     {
-        "slug": "gif-app2",
-        "title": "Gif App",
-        "description": "A simple Tenor Gif application that demonstrates API integration and dynamic content rendering.",
+        "slug": "ohme-energy-tracker",
+        "title": "Ohme Energy Tracking App",
+        "description": "A comprehensive energy management application featuring energy calendar tracking, goal progression monitoring, remote appliance control, and personalized energy-saving tips. Built to help users monitor usage, save money, and adopt greener living practices.",
         "screenshots": [
             {
-                "url": "https://picsum.photos/seed/gifapp/600/400",
-                "caption": "Screenshot of Gif App"
+                "url": "/screenshots/ohme/bootstrap-1.png",
+                "caption": "Energy Calendar Dashboard"
+            },
+            {
+                "url": "/screenshots/ohme/bootstrap-2.png",
+                "caption": "Goal Progression Tracker"
+            },
+            {
+                "url": "/screenshots/ohme/bootstrap-3.png",
+                "caption": "Remote Appliance Control"
             }
         ],
-        "url": "https://example.com/gif-app",
+        "url": "https://bootstrap-4fa85.web.app/second.html",
         "github": "",
         "date": "2025",
-        "tags": ["React", "JavaScript", "CSS", "HTML", "APIs"]
+        "tags": ["Bootstrap", "HTML", "CSS", "JavaScript", "IoT", "Energy Management"]
     },
     {
-        "slug": "gif-app3",
-        "title": "Gif App",
-        "description": "A simple Tenor Gif application that demonstrates API integration and dynamic content rendering.",
+        "slug": "medical-clinic-dashboard",
+        "title": "Medical Clinic Management System",
+        "description": "A full-featured healthcare management dashboard for managing doctors, patients, appointments, diagnoses, and prescriptions. Includes authentication, form validation, and comprehensive CRUD operations for medical data management.",
         "screenshots": [
             {
-                "url": "https://picsum.photos/seed/gifapp/600/400",
-                "caption": "Screenshot of Gif App"
+                "url": "/screenshots/medical/medical-1.png",
+                "caption": "Dashboard Overview"
+            },
+            {
+                "url": "/screenshots/medical/medical-2.png",
+                "caption": "Patient Management"
             }
         ],
-        "url": "https://example.com/gif-app",
+        "url": "https://fed-ca2-fb34a.web.app",
         "github": "",
         "date": "2025",
-        "tags": ["React", "JavaScript", "CSS", "HTML", "APIs"]
+        "tags": ["React", "Firebase", "Shadcn UI", "Form Validation", "Healthcare"]
     },
     {
-        "slug": "gif-app4",
-        "title": "Gif App",
-        "description": "A simple Tenor Gif application that demonstrates API integration and dynamic content rendering.",
+        "slug": "countries-celebrities-portal",
+        "title": "Global Countries & Celebrities Portal",
+        "description": "An interactive web portal showcasing featured countries with flags and capitals, alongside trending celebrities from around the world. Features carousel navigation, detailed information pages, and a responsive design for exploring global data.",
         "screenshots": [
             {
-                "url": "https://picsum.photos/seed/gifapp/600/400",
-                "caption": "Screenshot of Gif App"
+                "url": "/screenshots/countries/countries-1.png",
+                "caption": "Featured Countries Carousel"
+            },
+            {
+                "url": "/screenshots/countries/countries-2.png",
+                "caption": "Trending Celebrities Section"
+            },
+            {
+                "url": "/screenshots/countries/countries-3.png",
+                "caption": "Country Detail View"
             }
         ],
-        "url": "https://example.com/gif-app",
+        "url": "https://fed-y3-ca1.firebaseapp.com",
         "github": "",
-        "date": "2025",
-        "tags": ["React", "JavaScript", "CSS", "HTML", "APIs"]
+        "date": "2026",
+        "tags": ["React", "Firebase", "REST API", "Responsive Design", "Data Visualization"]
     }
 ]
